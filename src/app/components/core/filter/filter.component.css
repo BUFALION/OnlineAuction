@@ -1,0 +1,12 @@
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+span{
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 0.875rem;
+}

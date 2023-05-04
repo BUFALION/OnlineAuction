@@ -1,23 +1,54 @@
 [
   {
-   "make": "Toyota",
+    "id": "1",
+    "make": "Toyota",
     "model": "Camry",
     "year": 2021,
+    "isUsed": false,
+    "trim": "LE",
+    "drive": "front-wheel",
+    "engineSize": "2.5L",
     "color": "silver",
-    "price": 25000
+    "price": 25000,
+    "imageUrl": "https://cdn.pixabay.com/photo/2015/01/19/13/51/car-604019_960_720.jpg"
   },
   {
+    "id": "2",
     "make": "Honda",
     "model": "Civic",
     "year": 2022,
+    "isUsed": false,
+    "trim": "Touring",
+    "drive": "front-wheel",
+    "engineSize": "1.5L",
     "color": "white",
-    "price": 22000
+    "price": 22000,
+    "imageUrl": "https://cdn.pixabay.com/photo/2016/02/13/13/11/civic-1197806_960_720.jpg"
   },
   {
+    "id": "3",
     "make": "Ford",
     "model": "Mustang",
     "year": 2020,
+    "isUsed": true,
+    "trim": "GT",
+    "drive": "rear-wheel",
+    "engineSize": "5.0L",
     "color": "red",
-    "price": 35000
+    "price": 35000,
+    "imageUrl": "https://images.app.goo.gl/gfAfwGY2hWfRoiZy5"
+  },
+  {
+    "id": "4",
+    "make": "Audi",
+    "model": "S4",
+    "year": 2019,
+    "isUsed": true,
+    "trim": "Premium Plus",
+    "drive": "all-wheel",
+    "engineSize": "3.0L",
+    "color": "black",
+    "price": 40000,
+    "imageUrl": "https://cdn.pixabay.com/photo/2018/11/11/19/32/audi-s4-3805431_960_720.jpg"
   }
 ]

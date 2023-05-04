@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="img">
+  <img src="./assets/car2.jpg" alt=""
+       class="picture-car"
+  >
+  </div>
+  <div class="info-car">
+    <p >Used {{car.year}} {{car.make}} {{car.model}}</p>
+    <small class="car-parameter">
+      11 475 Milles
+    </small>
+
+    <ul>
+      <li><small class="car-parameter">{{car.color}}</small></li>
+      <li><small class="car-parameter">AWD</small></li>
+      <li><small class="car-parameter">1.5l Diesel</small></li>
+      <li><small class="car-parameter">coupe</small></li>
+      <li><small class="car-parameter">AWD</small></li>
+    </ul>
+
+    <p>${{car.price}}</p>
+  </div>
+
+
+<!--  //TODO ЗАЧЕМ ТУТ КНОПКА-->
+  <a  [routerLink]="['details',car.id]">
+  <button class="details">
+    <fa-icon [icon]="faEllipsis" class="icon"></fa-icon></button>
+  </a>
+
+
+</div>

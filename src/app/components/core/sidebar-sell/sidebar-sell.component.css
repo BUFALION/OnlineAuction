@@ -1,0 +1,33 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 8px 12px rgba(153, 155, 168, 0.15);
+  background-color: var(--background-color);
+}
+.price-container{
+  font-size: 1.375rem;
+  padding: 1.688rem 1.563rem;
+}
+.seller-container{
+  padding: 1.688rem 1.563rem;
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+}
+.seller-container button{
+  padding: 1.125rem 1.375rem;
+  width: 9.125rem;
+  height: 3.5rem;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+}

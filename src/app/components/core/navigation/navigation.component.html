@@ -1,0 +1,21 @@
+<div class="sidenav">
+
+  <div class="logo">
+    <fa-icon [icon]="faCar" class="logo-icon"></fa-icon>
+  </div>
+  <nav>
+    <ul class="sidenav-nav">
+      <ng-container *ngFor="let collection of navData">
+        <p class="sidenav-name-collection">{{collection.name}}</p>
+        <li class="sidenav-nav-item" *ngFor="let item of collection.items"
+            routerLinkActive="active"
+        >
+          <a [routerLink]=[item.path] class="sidenav-nav-link">
+            <fa-icon class="sidenav-link-icon" [icon]=item.icon></fa-icon>
+            <span class="sidenav-link-text">{{item.label}}</span>
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+</div>

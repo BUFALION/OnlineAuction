@@ -1,0 +1,11 @@
+<div class="container">
+  <app-search></app-search>
+  <div class="vehicles-block">
+    <app-vehicle-card
+      *ngFor="let car of cars"
+      [car]="car"
+    ></app-vehicle-card>
+  </div>
+<!--  <app-filter></app-filter>-->
+
+</div>

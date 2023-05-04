@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --text-color: #9a9ea7;
+  --border-color:#E4E6E8;
+  --background-color:#F5F6F7;
+  --text-darkcolor:#0D0A19;
+  --icon-purplecolor:#7963F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Inter', serif;
+}
+html{
+  font-size: 16px;
+}
