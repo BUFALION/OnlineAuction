@@ -1,0 +1,9 @@
+<div *ngIf="show" class="toast">
+  <div class="toast-row">
+    <fa-icon [icon]="faCircleExclamation"></fa-icon>
+    <div class="message">{{this.toastMessage}}</div>
+    <button class="close-button" (click)="close()"><fa-icon [icon]="faClose"></fa-icon></button>
+  </div>
+  <div class="progress-bar" [style.width.%]="progress"></div>
+</div>
+

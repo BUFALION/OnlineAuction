@@ -1,0 +1,16 @@
+<div [formGroup]="formGroup"  class="listing-settings">
+  <h1 class="settings-description">What kind of vehicle are you listing?</h1>
+
+  <div  class="input-item">
+    <input formControlName="vin" type="text" appFocusLabel>
+    <label >VIN</label>
+  </div>
+
+  <div class="checkbox-container">
+    <h5>Vehicle type</h5>
+    <div  class="checkbox-item" *ngFor="let option of options">
+      <input formControlName="option" type="radio" [id]="option.value" name="option" [value]="option.value">
+      <label [for]="option.value">  {{ option.value }}</label>
+    </div>
+  </div>
+</div>

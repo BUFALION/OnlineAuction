@@ -1,0 +1,35 @@
+
+<div class="container">
+  <div class="signup-container">
+    <div class="signup-header">
+      <fa-icon [icon]="faArrowLeft"></fa-icon>
+      <h3>Sign in</h3>
+      <fa-icon [icon]="faXmark"></fa-icon>
+    </div>
+
+    <form action="" [formGroup]="loginForm" (ngSubmit)="login()" class="form-signup">
+      <div class="form-item">
+        <input  formControlName="email" appFocusLabel
+                type="text" class="form-input" >
+        <label class="form-label"
+               [style.color]="this.loginForm.get('email')?.invalid &&
+              this.loginForm.get('email')?.touched ? 'red' : ''"
+        >Email</label>
+      </div>
+      <div class="form-item">
+        <input formControlName="password" appFocusLabel
+               type="password" class="form-input" >
+        <label class="form-label"
+               [style.color]="this.loginForm.get('password')?.invalid &&
+               this.loginForm.get('password')?.touched ? 'red' : ''"
+        >Password</label>
+      </div>
+      <button
+        [disabled]="loginForm.invalid"
+        type="submit" class="form-submit">Continue</button>
+    </form>
+
+    <p class="signup-text">You don't have an account?<strong><a class="signup-link">Sign up</a></strong></p>
+  </div>
+
+</div>

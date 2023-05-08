@@ -10,6 +10,7 @@
   color: var(--text-color);
 
   font-size: 0.875rem;
+
 }
 //TODO GRADIENT ADD
 .logo{
@@ -24,6 +25,9 @@
 
   margin-bottom: 3.125rem;
   margin-left: 1.875rem;
+}
+.sidenav-nav{
+  margin-bottom: 1rem;
 }
 .logo-icon{
   color: white;
@@ -76,11 +80,9 @@
 }
 .active {
     background-color: var(--background-color);
-
     .sidenav-link-text {
       color: var(--text-darkcolor)
     }
-
     .sidenav-link-icon {
       color: var(--icon-purplecolor);
     }

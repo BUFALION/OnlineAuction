@@ -58,11 +58,6 @@ h3{
   color: var(--text-color);
   font-weight: 600;
 }
-.form-fullname{
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-}
 
 .form-submit{
   width: 100%;
@@ -84,9 +79,9 @@ h3{
   cursor: auto;
 }
 .focus{
-    top: 0.875rem;
-    font-weight: 400;
-    font-size: 0.75rem;
+  top: 0.875rem;
+  font-weight: 400;
+  font-size: 0.75rem;
 }
 .signup-text{
   text-align: center;

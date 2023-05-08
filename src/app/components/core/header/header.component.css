@@ -45,10 +45,46 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 0.625rem 1rem;
-  border-radius:12px;
+  padding: 1.75rem;
+  box-shadow: 0 20px 24px rgba(153, 155, 168, 0.15);
+  border-radius: 12px;
   border: 2px var(--border-color) solid;
 }
 .menu-item{
+  margin-right: 2rem;
   text-decoration: none;
+  color: var(--text-darkcolor);
+  margin-bottom: 1.563rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all .4s ease;
+
+  display: flex;
+  gap: 0.675rem;
+}
+
+.menu-item:hover{
+  color: var(--icon-purplecolor);
+}
+
+.signup-link{
+  font-size: 0.875rem;
+  color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all .4s ease;
+}
+.icon-container{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  margin-right: .625rem;
+}
+.signup-link:hover{
+  color: var(--icon-purplecolor);
 }

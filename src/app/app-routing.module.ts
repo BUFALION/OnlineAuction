@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
-
 import {RouterModule, Routes} from "@angular/router";
-import {BodyComponent} from "./components/core/body/body.component";
-import {SearchComponent} from "./components/core/search/search.component";
-import {VehiclesComponent} from "./components/core/vehicles/vehicles.component";
-import {VehicleDetailsComponent} from "./components/core/vehicle-details/vehicle-details.component";
 import {SignupComponent} from "./components/authentication/signup/signup.component";
+import {SigninComponent} from "./components/authentication/signin/signin.component";
+import {ListingComponent} from "./components/listing/listing.component";
 
-//TODO search/auctions
-//TODO search/cars
 const routes: Routes = [
-  { path: 'signup', component: SignupComponent},
-  { path: 'search', component: VehiclesComponent},
-  {path:'search/details/:id',component:VehicleDetailsComponent}
+  {
+    path: '',
+    loadChildren: ()=> import('./components/core/core.module').then((m)=>m.CoreModule)
+
+  },
+  {path: '', redirectTo: '',pathMatch:'full'},
+  //TODO GUARD НЕЛЬЗЯ ВОЙТИ signup И signin если уже зашёл в систему
+  {path:'signup',component: SignupComponent},
+  {path:'signin',component: SigninComponent},
+  {
+    path: 'new-listing', component : ListingComponent,
+    loadChildren: ()=> import('./components/listing/listing.module').then((m)=>m.ListingModule)
+  }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

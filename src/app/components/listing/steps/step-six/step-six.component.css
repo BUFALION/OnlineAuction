@@ -1,0 +1,15 @@
+.btn-row{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-cancel {
+  align-self: stretch;
+  padding: 0.75rem 2.125rem;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  cursor: pointer;
+}

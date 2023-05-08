@@ -1,0 +1,20 @@
+<div [formGroup]="formGroup"  class="listing-settings">
+  <h1 class="settings-description">Describe your vehicle</h1>
+
+
+  <div class="input-item">
+    <input formControlName="title" type="text" appFocusLabel>
+    <label >Listing title</label>
+  </div>
+
+  <textarea
+    formControlName="description"
+    placeholder="Extended description"
+    class="textarea-item"></textarea>
+
+  <div class="input-item">
+    <input formControlName="price" type="text" appFocusLabel>
+    <label >Price in USD</label>
+  </div>
+
+</div>

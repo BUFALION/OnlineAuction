@@ -1,0 +1,33 @@
+<div [formGroup]="formGroup"  class="listing-settings">
+  <h1 class="settings-description">Where’s your vehicle located?</h1>
+
+  <div class="select-item">
+    <select class="select" formControlName="country">
+      <option>ONE</option>
+      <option>TWO</option>
+      <option>THREE</option>
+      <option>THOU</option>
+    </select>
+    <label class="select-label">Country</label>
+  </div>
+
+  <div class="select-item">
+    <select class="select" formControlName="city">
+      <option>ONE</option>
+      <option>TWO</option>
+      <option>THREE</option>
+      <option>THOU</option>
+    </select>
+    <label class="select-label">City</label>
+  </div>
+
+  <div class="input-item">
+    <input type="text" appFocusLabel formControlName="streetAddress">
+    <label>Street address</label>
+  </div>
+
+  <div class="input-item">
+    <input type="text" appFocusLabel formControlName="code">
+    <label>Code</label>
+  </div>
+</div>

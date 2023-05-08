@@ -1,0 +1,19 @@
+<div class="container">
+  <header class="header-listing">
+    <div class="logo"></div>
+    <button class="btn-cancel"><strong>Cancel</strong></button>
+  </header>
+  <div class="listing-step-container" >
+
+    <ng-container #stepContainer></ng-container>
+    <button [hidden]="listingStep!=0" (click)="strart()">Start</button>
+    <div class="listing-navigate">
+      <button [hidden]="listingStep===1"
+        class="btn-cancel" (click)="backStep()">Back</button>
+      <button
+        [ngStyle]="listingStep===1?{'width':'100%'}:{}"
+        class="btn-next" (click)="nextStep()">Next</button>
+    </div>
+  </div>
+</div>
+

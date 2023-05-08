@@ -1,7 +1,5 @@
 
 <div class="container">
-
-
   <div class="signup-container">
     <div class="signup-header">
         <fa-icon [icon]="faArrowLeft"></fa-icon>
@@ -9,26 +7,50 @@
         <fa-icon [icon]="faXmark"></fa-icon>
     </div>
 
-    <form action="" class="form-signup">
-
+    <form action="" [formGroup]="registrationForm" (ngSubmit)="registration()" class="form-signup">
       <div class="form-item">
-        <input type="text" class="form-input" required>
-        <label class="form-label">Email</label>
+        <input  formControlName="email" appFocusLabel
+                type="text" class="form-input" >
+        <label class="form-label"
+              [style.color]="this.registrationForm.get('email')?.invalid &&
+              this.registrationForm.get('email')?.touched ? 'red' : ''"
+          >Email</label>
       </div>
 
       <div class="form-fullname">
         <div class="form-item">
-          <input type="text" class="form-input" required>
-          <label class="form-label">First name</label>
+          <input formControlName="firstName" appFocusLabel
+            type="text" class="form-input" required>
+          <label class="form-label"
+                 [style.color]="this.registrationForm.get('firstName')?.invalid &&
+                 this.registrationForm.get('firstName')?.touched ? 'red' : ''"
+            >First name</label>
         </div>
         <div class="form-item">
-          <input type="text" class="form-input" required>
-          <label class="form-label">Last name</label>
+          <input formControlName="secondName" appFocusLabel
+            type="text" class="form-input" >
+          <label class="form-label"
+                 [style.color]="this.registrationForm.get('secondName')?.invalid &&
+                 this.registrationForm.get('secondName')?.touched ? 'red' : ''"
+          >Last name</label>
         </div>
       </div>
 
+      <div class="form-item">
+        <input formControlName="password" appFocusLabel
+          type="password" class="form-input" >
+        <label class="form-label"
+               [style.color]="this.registrationForm.get('password')?.invalid &&
+               this.registrationForm.get('password')?.touched ? 'red' : ''"
+        >Password</label>
+      </div>
 
+      <button
+        [disabled]="registrationForm.invalid"
+        type="submit" class="form-submit">Continue</button>
     </form>
+
+    <p class="signup-text">Do you already have an account? <strong><a class="signup-link">Sign in</a></strong></p>
   </div>
 
 </div>

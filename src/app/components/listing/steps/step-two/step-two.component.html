@@ -1,0 +1,47 @@
+<div [formGroup]="formGroup" class="listing-settings">
+  <h1 class="settings-description">Tell us basic features of your car</h1>
+
+  <div class="select-item">
+
+    <select class="select" formControlName="makeControl">
+      <option>ONE</option>
+      <option>TWO</option>
+      <option>THREE</option>
+      <option>THOU</option>
+    </select>
+    <label class="select-label">Make</label>
+  </div>
+  <div class="select-item">
+    <select class="select" formControlName="modelControl">
+      <option>ONE</option>
+      <option>TWO</option>
+      <option>THREE</option>
+      <option>THOU</option>
+    </select>
+
+    <label class="select-label">Model</label>
+  </div>
+
+  <div class="input-item">
+    <input type="text" appFocusLabel formControlName="yearControl">
+    <label>Year</label>
+  </div>
+
+  <div class="input-item">
+    <input type="text" appFocusLabel formControlName="mileageControl">
+    <label>Millage</label>
+  </div>
+
+  <div class="inputs-row">
+    <div class="input-item">
+      <input type="text" appFocusLabel formControlName="engineControl">
+      <label>Engine</label>
+    </div>
+
+    <div class="input-item">
+      <input type="text" appFocusLabel formControlName="bodyColorControl">
+      <label>Body color</label>
+    </div>
+  </div>
+</div>
+

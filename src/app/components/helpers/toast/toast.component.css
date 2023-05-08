@@ -1,0 +1,43 @@
+.toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 10px;
+  border-radius: 12px;
+  color: var(--text-darkcolor);
+
+  display: block;
+
+  background: rgba(255, 255, 255, .85);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 21, .15);
+
+  gap: 0.625rem;
+}
+.toast-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+.message {
+  font-size: .875rem;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-bar {
+  height: 4px;
+  background-color: var(--icon-purplecolor);
+  width: 0;
+  transition: width 0.5s ease; /* Анимация для изменения ширины */
+  border-radius: .375rem;
+}

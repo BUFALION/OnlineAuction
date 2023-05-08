@@ -1,0 +1,38 @@
+<div class="listing-settings">
+  <h1 class="settings-description">Set auction rules for your vehicle</h1>
+
+      <div class="btn-row">
+        <button class="btn"
+                [ngClass]="{'btn-enable': !auctionDisable}"
+                (click)="auctionDisable=false"
+        >Enable auction</button>
+        <button class="btn"
+                [ngClass]="{'btn-enable': auctionDisable}"
+                (click)="auctionDisable=true"
+        >Disable auction</button>
+      </div>
+  <ng-container *ngIf="!auctionDisable">
+    <div class="select-item">
+      <select class="select">
+        <option>1 minute</option>
+        <option>1 hour</option>
+        <option>6 hour</option>
+        <option>1 day</option>
+      </select>
+      <label class="select-label">Auction time</label>
+    </div>
+
+
+    <div class="checkbox-container">
+      <h5>Auction options</h5>
+      <div class="checkbox-item" >
+        <input type="radio"  name="minPrice" >
+        <label>Fixed minimal price</label>
+      </div>
+      <div class="checkbox-item" >
+        <input type="radio" name="offers" >
+        <label>Offers available</label>
+      </div>
+    </div>
+  </ng-container>
+</div>

@@ -2,18 +2,33 @@
   <h2 class="title">Find vehilce</h2>
 
   <div class="right-block">
-    <div class="notifications">
-      <fa-icon [icon]="faBell"></fa-icon>
 
-      <div class="notification-signal"></div>
-    </div>
-    <div class="avatar" (click)="showMenu=!showMenu">
-      <div class="menu" *ngIf="showMenu">
-        <a href="#" class="menu-item">Settings</a>
-        <a href="#" class="menu-item">Logout</a>
+    <ng-container *ngIf="isLogged; else login">
+      <div class="notifications">
+        <fa-icon [icon]="faBell"></fa-icon>
+        <div class="notification-signal"></div>
       </div>
-
-    </div>
+      <div class="avatar" (click)="showMenu=!showMenu">
+        <div class="menu" *ngIf="showMenu">
+          <a href="#" class="menu-item">
+            <fa-icon [icon]="faGear"></fa-icon>
+            Settings</a>
+          <a routerLink="signin"
+             (click)="logout()"
+            class="menu-item">
+            <fa-icon [icon]="faRightFromBracket"></fa-icon>
+            Logout</a>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #login>
+      <a routerLink="/signup" class="signup-link">
+        <div class="icon-container">
+          <fa-icon [icon]="faUser"></fa-icon>
+        </div>
+        Sign Up
+      </a>
+    </ng-template>
   </div>
 
 </header>

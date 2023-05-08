@@ -1,0 +1,29 @@
+<div
+  class="drop-zone"
+  [ngClass]="{ 'drag-over': isDragOver }"
+  (dragover)="onDragOver($event)"
+  (dragleave)="onDragLeave($event)"
+  (drop)="onDrop($event)"
+>
+
+  <div *ngIf="imagesPreview.length!=0" class="list-image">
+    <div *ngFor="let imageUrl of imagesPreview" class="image-item">
+      <img class="image" [src]="imageUrl" alt="Image">
+      <button class="btn-cancel" (click)="removeImage(imageUrl)">
+        <fa-icon [icon]="faXmark"></fa-icon>
+      </button>
+    </div>
+  </div>
+
+
+
+  <button class="button-upload">Upload photos</button>
+  <ng-container *ngIf="imagesPreview.length<=0">
+    <p>or</p>
+    <p>Drag your items in</p>
+  </ng-container>
+
+
+</div>
+
+

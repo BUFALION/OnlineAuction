@@ -1,0 +1,35 @@
+.container{
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+
+  font-size: 0.75rem;
+  padding: 1.25rem 1.875rem;
+  border-radius: 12px;
+
+}
+.btn-sell{
+  padding: 0.625rem 0;
+  margin-top: 0.75rem;
+  width: 100%;
+  color: var(--text-darkcolor);
+  border: none;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+.btn-sell fa-icon{
+  margin-right: 0.375rem;
+  color: var(--icon-purplecolor);
+
+}
+.btn-sell:hover{
+
+  background-color: rgba(221, 210, 253, 0.9);
+}

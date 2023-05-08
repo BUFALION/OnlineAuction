@@ -1,0 +1,68 @@
+.drop-zone {
+  width: 46.875rem;
+  height: 28.125rem;
+  border: 2px dashed var(--border-color);
+  text-align: center;
+  cursor: pointer;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding:1.125rem;
+  gap: 1rem;
+}
+.drag-over {
+  border-color: #ff0000;
+}
+.drag-over{
+  background-color: #7963F0;
+}
+.list-image{
+  display: flex;
+  overflow:auto;
+  gap: 0.875rem;
+  flex-wrap: wrap;
+}
+.image-item{
+  position: relative;
+}
+.image{
+  width: 10.313rem;
+  height: 8.5rem;
+  border-radius: 7px;
+}
+.btn-cancel{
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.125rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  border-radius: 10px;
+  border: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  border-radius: 5px;
+}
+
